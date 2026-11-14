@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
     'lib/colorize/errors.rb',
     'lib/colorize/class_methods.rb',
     'lib/colorize/instance_methods.rb',
+    'lib/colorize/methods.rb',
     'lib/colorize/version.rb',
     'test/test_colorize.rb',
     'test/test_colorized_string.rb',

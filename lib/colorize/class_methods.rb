@@ -19,7 +19,9 @@ module Colorize
       light_blue:    94,
       light_magenta: 95,
       light_cyan:    96,
-      light_white:   97
+      light_white:   97,
+      grey:          90,
+      gray:          90
     }
 
     @@mode_codes ||= {
