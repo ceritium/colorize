@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
-require File.expand_path('colorize/version', File.dirname(__FILE__))
-require File.expand_path('colorize/errors', File.dirname(__FILE__))
-require File.expand_path('colorize/class_methods', File.dirname(__FILE__))
-require File.expand_path('colorize/instance_methods', File.dirname(__FILE__))
+require_relative 'colorize/version'
+require_relative 'colorize/errors'
+require_relative 'colorize/class_methods'
+require_relative 'colorize/instance_methods'
+require_relative 'colorize/methods'
 
 #
 # String class extension.
@@ -11,10 +12,5 @@ require File.expand_path('colorize/instance_methods', File.dirname(__FILE__))
 class String
   extend Colorize::ClassMethods
   include Colorize::InstanceMethods
-
-  color_methods
-  modes_methods
-
-  add_color_alias(:grey, :light_black) unless color_exist?(:grey)
-  add_color_alias(:gray, :light_black) unless color_exist?(:gray)
+  include Colorize::Methods
 end
